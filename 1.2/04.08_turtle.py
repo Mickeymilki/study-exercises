@@ -1,7 +1,11 @@
 import turtle
-t = turtle.Turtle()
-screen = turtle.Screen()
+from turtle import *
+
+screen = Screen()
 print(screen.screensize()) 
+
+t = turtle.Turtle()
+
 
 t.width(100)
 t.speed(10)
