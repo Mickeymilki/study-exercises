@@ -28,7 +28,7 @@ class TestSystemApp:
 
     def load_questions(self):
         # Read questions from file and populate self.questions list
-        with open("questions.txt", "r") as file:
+        with open("04.29_test\questions.txt", "r") as file:
             lines = file.readlines()
             question = ""
             answers = []
@@ -40,7 +40,7 @@ class TestSystemApp:
                     question = line[2:]
                     answers = []
                 elif line.startswith("+"):
-                    answers.append(line[1:])
+                    answers.append(line)
                 else:
                     answers.append(line)
 
@@ -67,7 +67,7 @@ class TestSystemApp:
     def show_result(self):
         total_questions = len(self.questions)
         percentage = (self.correct_answers / total_questions) * 100
-        result_text = f"Correct Answers: {self.correct_answers}/{total_questions}\nPercentage: {percentage:.2f}%"
+        result_text = f"Правильных ответов: {self.correct_answers}/{total_questions}\nПроцент: {percentage:.2f}%"
         self.result_label.config(text=result_text)
 
 app = TestSystemApp()
