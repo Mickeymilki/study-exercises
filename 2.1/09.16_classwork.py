@@ -1,4 +1,3 @@
-import time
 import threading 
 class Pet:
     def __init__(self, name, hunger):
