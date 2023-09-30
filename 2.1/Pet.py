@@ -39,4 +39,4 @@ while not gameover:
         case 'v':
             gameover = True
             Cat.stop()
-            
+ 
