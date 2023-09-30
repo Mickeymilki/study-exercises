@@ -19,7 +19,7 @@ class Pet:
         self.hunger_level = 0
         print(f"{self.name} накормлен)")
     def exit(self):
-        Timer.cancel()
+        threading.Timer.cancel()
 Pet = Pet("Кот", 5)
 Pet.hunger()
 
