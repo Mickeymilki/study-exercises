@@ -1,6 +1,6 @@
 import threading 
 class Pet:
-    def __init__(self, name, hunger, Timer=10, hp=True):
+    def __init__(self, name, hunger, Timer=5, hp=True):
         self.name = name
         self._hunger = hunger
         self.hunger_level = 0
@@ -12,7 +12,7 @@ class Pet:
             self.hunger_level += 1
             self.hp = True
             print(f"{self.name} хочет есть! Уровень голода: {self.hunger_level}")
-            self.timer = threading.Timer(10.0, self.hunger)
+            self.timer = threading.Timer(5.0, self.hunger)
             self.timer.start()
          else:
             print(f"{self.name} умирает от голода!")
