@@ -1,4 +1,5 @@
 import tkinter as tk
+
 class Planet:
     def __init__(self, name, Diameter, distance_from_TheSun, pozition, description):
       self.name = name
@@ -24,7 +25,7 @@ Neptune = Planet( 'Neptune', '49 528 км', '4,55 млрд км', '#выводи
 Pluto = Planet( 'Pluto', '2 376 км', '5,9 млрд км', '#выводить угол вектора от Солнца', '#описание')
 
 win = tk.Tk()
-icon = tk.PhotoImage(file='')
+icon = tk.PhotoImage(file='logo.png')
 win.iconphoto(False, icon)
 win.config(bg='window_bg.jpg')
 win.geometry(newGeometry="600x600")
